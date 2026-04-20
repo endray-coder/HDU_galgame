@@ -111,7 +111,7 @@ label dev_log:
     # 返回主菜单
     menu:
         "返回主菜单":
-            jump main_menu
+            $ renpy.full_restart()
 
 # 游戏开始
 label start:
