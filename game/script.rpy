@@ -12,10 +12,10 @@ init python:
             renpy.hide_screen('timeline')
         else:
             renpy.show_screen('timeline')
-    
-    # 绑定t键到toggle_timeline函数
-    config.underlay.append(renpy.Keymap(t=toggle_timeline))
 
+# 全局按键绑定screen
+screen keymap_screen:
+    key "t" action Function(toggle_timeline)
 
 # 定义屏幕
 screen main_menu:
@@ -63,7 +63,7 @@ screen main_menu:
 
 # 时间线回溯屏幕
 screen timeline:
-    add Solid("#34495e")
+
     
     vbox:
         xalign 0.5
@@ -99,7 +99,7 @@ screen timeline:
             text_color "#ffffff"
             xminimum 150
         
-        textbutton "返回" action Return():
+        textbutton "返回" action Hide("timeline"):
             background Solid("#e74c3c")
             hover_background Solid("#c0392b")
             text_size 20
@@ -126,6 +126,9 @@ label dev_log:
 
 # 游戏开始
 label start:
+    # 显示全局按键绑定screen
+    show screen keymap_screen
+    
     # 0-0：杭电大门口
     scene blue
     "我：我...我重生了吗？（脑袋嗡嗡响）呃...我回到十八岁了？这又是哪？杭州电子科技大学？"
