@@ -1,10 +1,21 @@
-﻿# 重生之我在杭电读计算机？！
+# 重生之我在杭电读计算机？！
 
 # 初始化
 init:
     # 定义颜色
     define gui.main_menu_background = Solid("#2c3e50")
     define gui.game_menu_background = Solid("#34495e")
+    
+init python:
+    def toggle_timeline():
+        if renpy.get_screen('timeline'):
+            renpy.hide_screen('timeline')
+        else:
+            renpy.show_screen('timeline')
+    
+    # 绑定t键到toggle_timeline函数
+    config.underlay.append(renpy.Keymap(t=toggle_timeline))
+
 
 # 定义屏幕
 screen main_menu:
