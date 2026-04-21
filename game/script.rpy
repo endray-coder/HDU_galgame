@@ -2,9 +2,8 @@
 
 # 初始化
 init:
-    # 定义颜色
-    define gui.main_menu_background = Solid("#2c3e50")
-    define gui.game_menu_background = Solid("#34495e")
+    define gui.main_menu_background = "images/main_menu.png"
+    define gui.game_menu_background = "images/game_menu.png"
     
 init python:
     def toggle_timeline():
@@ -19,47 +18,75 @@ screen keymap_screen:
 
 # 定义屏幕
 screen main_menu:
-    # 背景颜色
-    add Solid("#2c3e50")
+    # 背景
+    add "images/main_manu.png":
+        zoom 2.0
     
-    # 游戏标题和介绍文本
-    vbox:
-        xalign 0.5
-        ypos 100
-        text "重生之我在杭电读计算机？！" size 40 color "#ffffff"
-        text "上一世，我自命不凡，在十八岁那年拒绝读书而选择外出拼搏，却渡过了碌碌无为的一生。这一世，我要用知识改变我的命运......" size 20 color "#ffffff"
-        spacing 30
-    
-    # 菜单选项
-    vbox:
-        xalign 0.5
-        ypos 300
+    # 侧边栏
+    fixed:
+        xpos 0
+        ypos 0
+        xsize 200
+        ysize 1.0
+        add Solid("#00000080")
         
-        # 开始游戏
-        textbutton "开始游戏" action Start():
-            background Solid("#3498db")
-            hover_background Solid("#2980b9")
-            text_size 24
-            text_color "#ffffff"
-            xminimum 200
-        
-        # 查看开发者日志
-        textbutton "查看开发者日志" action Jump("dev_log"):
-            background Solid("#3498db")
-            hover_background Solid("#2980b9")
-            text_size 24
-            text_color "#ffffff"
-            xminimum 200
-        
-        # 退出游戏
-        textbutton "退出游戏" action Quit():
-            background Solid("#e74c3c")
-            hover_background Solid("#c0392b")
-            text_size 24
-            text_color "#ffffff"
-            xminimum 200
-        
-        spacing 20
+        vbox:
+            ypos 100
+            spacing 20
+            
+            # 开始游戏
+            textbutton _("开始") action Start():
+                background None
+                hover_background Solid("#ffffff20")
+                text_size 20
+                text_color "#ffffff"
+                xminimum 160
+                xalign 0.5
+            
+            # 读档
+            textbutton _("读取") action ShowMenu("load"):
+                background None
+                hover_background Solid("#ffffff20")
+                text_size 20
+                text_color "#ffffff"
+                xminimum 160
+                xalign 0.5
+            
+            # 首选项
+            textbutton _("首选项") action ShowMenu("preferences"):
+                background None
+                hover_background Solid("#ffffff20")
+                text_size 20
+                text_color "#ffffff"
+                xminimum 160
+                xalign 0.5
+            
+            # 关于
+            textbutton _("关于") action Jump("dev_log"):
+                background None
+                hover_background Solid("#ffffff20")
+                text_size 20
+                text_color "#ffffff"
+                xminimum 160
+                xalign 0.5
+            
+            # 帮助
+            textbutton _("帮助") action ShowMenu("help"):
+                background None
+                hover_background Solid("#ffffff20")
+                text_size 20
+                text_color "#ffffff"
+                xminimum 160
+                xalign 0.5
+            
+            # 退出游戏
+            textbutton _("退出") action Quit():
+                background None
+                hover_background Solid("#ffffff20")
+                text_size 20
+                text_color "#ffffff"
+                xminimum 160
+                xalign 0.5
 
 # 时间线回溯屏幕
 screen timeline:
