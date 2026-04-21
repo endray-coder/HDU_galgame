@@ -22,71 +22,81 @@ screen main_menu:
     add "images/main_manu.png":
         zoom 2.0
     
+    # 菜单文字大小
+    default menu_text_size = 30
+    # 菜单文字左内边距
+    default menu_left_padding = 30
     # 侧边栏
     fixed:
         xpos 0
         ypos 0
-        xsize 200
+        xsize 250
         ysize 1.0
         add Solid("#00000080")
         
         vbox:
-            ypos 100
+            ypos 300
             spacing 20
             
             # 开始游戏
             textbutton _("开始") action Start():
                 background None
                 hover_background Solid("#ffffff20")
-                text_size 20
+                text_size menu_text_size
                 text_color "#ffffff"
                 xminimum 160
                 xalign 0.5
+                left_padding menu_left_padding
             
             # 读档
             textbutton _("读取") action ShowMenu("load"):
                 background None
                 hover_background Solid("#ffffff20")
-                text_size 20
+                text_size menu_text_size
                 text_color "#ffffff"
                 xminimum 160
                 xalign 0.5
+                left_padding menu_left_padding
             
             # 首选项
             textbutton _("首选项") action ShowMenu("preferences"):
                 background None
                 hover_background Solid("#ffffff20")
-                text_size 20
+                text_size menu_text_size
                 text_color "#ffffff"
                 xminimum 160
                 xalign 0.5
+                left_padding menu_left_padding
             
             # 关于
             textbutton _("关于") action Jump("dev_log"):
                 background None
                 hover_background Solid("#ffffff20")
-                text_size 20
+                text_size menu_text_size
                 text_color "#ffffff"
                 xminimum 160
                 xalign 0.5
+                left_padding menu_left_padding
             
             # 帮助
             textbutton _("帮助") action ShowMenu("help"):
                 background None
                 hover_background Solid("#ffffff20")
-                text_size 20
+                text_size menu_text_size
                 text_color "#ffffff"
                 xminimum 160
                 xalign 0.5
+                left_padding menu_left_padding
             
             # 退出游戏
             textbutton _("退出") action Quit():
                 background None
                 hover_background Solid("#ffffff20")
-                text_size 20
+                text_size menu_text_size
                 text_color "#ffffff"
                 xminimum 160
                 xalign 0.5
+                left_padding menu_left_padding
 
 # 时间线回溯屏幕
 screen timeline:
