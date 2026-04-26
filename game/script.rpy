@@ -6,7 +6,7 @@ define xuan = Character('璇', color="#ff69b4")
 
 # 初始化
 init:
-    define gui.main_menu_background = "images/4-0.png"
+    define gui.main_menu_background = "images/封面.png"
     define gui.game_menu_background = "images/game_menu.png"
     
 init python:
@@ -27,12 +27,12 @@ screen main_menu:
     # 菜单文字左内边距
     default menu_left_padding = 30
     
-    # 背景（从侧边栏右侧开始显示）
-    add "images/4-0.png":
-        xpos 250
-        ypos 0
-        xsize config.screen_width - 250
-        ysize config.screen_height
+    # 背景（覆盖整个屏幕）
+    add "images/cover1.png":
+        xalign 0.5
+        yalign 0.5
+        xysize (config.screen_width, config.screen_height)
+        
     
     # 侧边栏
     fixed:
@@ -504,27 +504,27 @@ image black = Solid("#000000")
 image white = Solid("#ffffff")
 
 # 场景图片
-image bg_entrance = "images/entrance.jpg"         # 杭电大门口
-image bg_yijiao_outer = "images/yijiao_outer.jpg" # 一教外
-image bg_yijiao_entrance = "images/yijiao.jpg"     # 一教正门
-image bg_yijiao_hall = "images/yijiao_hall.jpg"   # 一教一楼的大厅
-image bg_yijiao_stairs1 = "images/yijiao_stairs1.jpg" # 一至二楼的楼梯
-image bg_yijiao_second = "images/yijiao_second.jpg" # 到二楼了
-image bg_yijiao_stairs2 = "images/yijiao_stairs2.jpg" # 二至三楼的楼梯
-image bg_yijiao_third = "images/yijiao_third.jpg"   # 到三楼了
-image bg_sijiao_entrance = "images/sijiao.jpg"      # 四教正门
-image bg_sijiao_platform = "images/sijiao_platform.jpg" # 四教二楼台子
-image bg_sijiao_lab = "images/sijiao_lab.jpg"       # 实验室外
-image bg_liujiao_library = "images/liujiao_library.jpg" # 六教靠近图书馆一侧
-image bg_liujiao_first = "images/liujiao_first.jpg"   # 到了六教一楼
-image bg_liujiao_north = "images/liujiao_north.jpg"   # 六教北
-image bg_liujiao_classroom = "images/liujiao_classroom.jpg" # 新装潢的教室
-image bg_liujiao_corridor = "images/liujiao_corridor.jpg" # 六教一走廊
-image bg_path_to_qijiao = "images/path_to_qijiao.jpg" # 从六教绕回七教的路上
-image bg_qijiao_entrance = "images/qijiao.jpg"        # 七教门口
-image bg_qijiao_inside = "images/qijiao_inside.jpg"    # 刚进入七教
-image bg_qijiao_stairs = "images/qijiao_stairs.jpg"    # 去南楼的楼梯处
-image bg_qijiao_fourth = "images/qijiao_fourth.jpg"    # 去到了北楼四楼
-image bg_path_to_beier = "images/path_to_beier.jpg"    # 去北二门的路上
-image bg_road = "images/road.jpg"                    # 在马路
-image bg_dorm_sunset = "images/dorm_sunset.jpg"      # 宿舍楼看夕阳
+image bg_entrance = "images/封面.png"         # 杭电大门口
+image bg_yijiao_outer = "images/0-1-2.png"    # 一教外
+image bg_yijiao_entrance = "images/1-1.png"   # 一教正门
+image bg_yijiao_hall = "images/1-1.png"       # 一教一楼的大厅
+image bg_yijiao_stairs1 = "images/1-3-1.png"  # 一至二楼的楼梯
+image bg_yijiao_second = "images/1-4.png"     # 到二楼了
+image bg_yijiao_stairs2 = "images/1-5-1.png"  # 二至三楼的楼梯
+image bg_yijiao_third = "images/1-7.png"      # 到三楼了
+image bg_sijiao_entrance = "images/2-1.png"   # 四教正门
+image bg_sijiao_platform = "images/2-2.png"   # 四教二楼台子
+image bg_sijiao_lab = "images/2-2.png"        # 实验室外
+image bg_liujiao_library = "images/3-1.png"   # 六教靠近图书馆一侧
+image bg_liujiao_first = "images/3-2.png"     # 到了六教一楼
+image bg_liujiao_north = "images/3-3.png"     # 六教北
+image bg_liujiao_classroom = "images/3-4.png"  # 新装潢的教室
+image bg_liujiao_corridor = "images/3-6.png"  # 六教一走廊
+image bg_path_to_qijiao = "images/4-0.png"    # 从六教绕回七教的路上
+image bg_qijiao_entrance = "images/4-1.png"    # 七教门口
+image bg_qijiao_inside = "images/4-2-1.png"    # 刚进入七教
+image bg_qijiao_stairs = "images/4-3.png"      # 去南楼的楼梯处
+image bg_qijiao_fourth = "images/4-4-2.png"    # 去到了北楼四楼
+image bg_path_to_beier = "images/4-4-2.png"    # 去北二门的路上
+image bg_road = "images/5-2-1.png"            # 在马路
+image bg_dorm_sunset = "images/5-3.png"        # 宿舍楼看夕阳
