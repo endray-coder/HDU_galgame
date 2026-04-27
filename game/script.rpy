@@ -1,7 +1,7 @@
 # 重生之我在杭电读计算机？！
 
 # 定义角色
-define me = Character('我', color="#ffffff")
+define me = Character('我', color="#306ed2")
 define xuan = Character('璇', color="#ff69b4")
 
 # 初始化

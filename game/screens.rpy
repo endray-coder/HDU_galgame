@@ -373,17 +373,17 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xsize 500
     yfill True
 
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
-    xoffset -30
-    xmaximum 1200
+    xoffset -40
+    xmaximum 1400
     yalign 1.0
-    yoffset -30
+    yoffset -40
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -488,22 +488,22 @@ style return_button is navigation_button
 style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
-    bottom_padding 45
-    top_padding 180
+    bottom_padding 60
+    top_padding 240
 
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 500
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
-    right_margin 30
-    top_margin 15
+    left_margin 80
+    right_margin 40
+    top_margin 20
 
 style game_menu_viewport:
-    xsize 1380
+    xsize 1400
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -512,18 +512,18 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
-    ysize 180
+    xpos 100
+    ysize 240
 
 style game_menu_label_text:
-    size 75
+    size 90
     color gui.accent_color
     yalign 0.5
 
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -45
+    yoffset -60
 
 
 ## 关于屏幕 ########################################################################
