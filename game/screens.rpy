@@ -212,7 +212,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    ypos 432
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -373,17 +373,17 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xsize 448
     yfill True
 
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
-    xoffset -30
-    xmaximum 1200
+    xoffset -32
+    xmaximum 1280
     yalign 1.0
-    yoffset -30
+    yoffset -32
 
 style main_menu_text:
     properties gui.text_properties("main_menu", accent=True)
@@ -488,42 +488,42 @@ style return_button is navigation_button
 style return_button_text is navigation_button_text
 
 style game_menu_outer_frame:
-    bottom_padding 45
-    top_padding 180
+    bottom_padding 48
+    top_padding 192
 
     background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
-    xsize 420
+    xsize 384  # 调整导航框架宽度以适应4:3屏幕
     yfill True
 
 style game_menu_content_frame:
-    left_margin 60
-    right_margin 30
-    top_margin 15
+    left_margin 48  # 调整边距以适应4:3屏幕
+    right_margin 24
+    top_margin 12
 
 style game_menu_viewport:
-    xsize 1380
+    xsize 1366  # 调整视口宽度以适应4:3屏幕
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
 
 style game_menu_side:
-    spacing 15
+    spacing 16
 
 style game_menu_label:
-    xpos 75
-    ysize 180
+    xpos 80
+    ysize 192
 
 style game_menu_label_text:
-    size 75
+    size 80
     color gui.accent_color
     yalign 0.5
 
 style return_button:
     xpos gui.navigation_xpos
     yalign 1.0
-    yoffset -45
+    yoffset -48
 
 
 ## 关于屏幕 ########################################################################
@@ -686,7 +686,7 @@ style slot_time_text is slot_button_text
 style slot_name_text is slot_button_text
 
 style page_label:
-    xpadding 75
+    xpadding 80
     ypadding 5
     xalign 0.5
 
@@ -823,13 +823,13 @@ style mute_all_button_text is check_button_text
 
 style pref_label:
     top_margin gui.pref_spacing
-    bottom_margin 3
+    bottom_margin 4
 
 style pref_label_text:
     yalign 1.0
 
 style pref_vbox:
-    xsize 338
+    xsize 360
 
 style radio_vbox:
     spacing gui.pref_button_spacing
@@ -852,18 +852,18 @@ style check_button_text:
     properties gui.text_properties("check_button")
 
 style slider_slider:
-    xsize 525
+    xsize 560
 
 style slider_button:
     properties gui.button_properties("slider_button")
     yalign 0.5
-    left_margin 15
+    left_margin 16
 
 style slider_button_text:
     properties gui.text_properties("slider_button")
 
 style slider_vbox:
-    xsize 675
+    xsize 720
 
 
 ## 历史屏幕 ########################################################################
@@ -971,7 +971,7 @@ screen help():
         style_prefix "help"
 
         vbox:
-            spacing 23
+            spacing 24
 
             hbox:
 
@@ -1100,14 +1100,14 @@ style help_text is gui_text
 
 style help_button:
     properties gui.button_properties("help_button")
-    xmargin 12
+    xmargin 13
 
 style help_button_text:
     properties gui.text_properties("help_button")
 
 style help_label:
-    xsize 375
-    right_padding 30
+    xsize 400
+    right_padding 32
 
 style help_label_text:
     size gui.text_size
@@ -1143,7 +1143,7 @@ screen confirm(message, yes_action, no_action):
         vbox:
             xalign .5
             yalign .5
-            spacing 45
+            spacing 48
 
             label _(message):
                 style "confirm_prompt"
@@ -1151,7 +1151,7 @@ screen confirm(message, yes_action, no_action):
 
             hbox:
                 xalign 0.5
-                spacing 150
+                spacing 160
 
                 textbutton _("确定") action yes_action
                 textbutton _("取消") action no_action
@@ -1197,7 +1197,7 @@ screen skip_indicator():
     frame:
 
         hbox:
-            spacing 9
+            spacing 10
 
             text _("正在快进")
 
@@ -1491,7 +1491,7 @@ define bubble.expand_area = {
 
 style pref_vbox:
     variant "medium"
-    xsize 675
+    xsize 720
 
 ## 由于可能没有鼠标，我们将快捷菜单替换为一个使用更少、更大按钮的版本，这样更容
 ## 易触摸。
@@ -1538,7 +1538,7 @@ style game_menu_outer_frame:
 
 style game_menu_navigation_frame:
     variant "small"
-    xsize 510
+    xsize 544
 
 style game_menu_content_frame:
     variant "small"
@@ -1546,11 +1546,11 @@ style game_menu_content_frame:
 
 style game_menu_viewport:
     variant "small"
-    xsize 1305
+    xsize 1392
 
 style pref_vbox:
     variant "small"
-    xsize 600
+    xsize 640
 
 style bar:
     variant "small"
@@ -1594,4 +1594,4 @@ style slider_vbox:
 
 style slider_slider:
     variant "small"
-    xsize 900
+    xsize 960

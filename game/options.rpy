@@ -195,3 +195,11 @@ init python:
 ## 与 itch.io 项目相关的用户名和项目名，以 / 分隔。
 
 # define build.itch_project = "renpytom/test-project"
+init python early:
+    # 告诉 Ren'Py：你的 UI 是按 1920x1080 设计的
+    config.gui_width = 1920
+    config.gui_height = 1080
+
+    # 实际显示窗口大小（可改）
+    config.screen_width = 1920
+    config.screen_height = 1080
