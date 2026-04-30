@@ -1,7 +1,7 @@
 # 重生之我在杭电读计算机？！
 
 # 定义角色
-define me = Character('我', color="#ffffff")
+define me = Character('我', color="#306ed2")
 define xuan = Character('璇', color="#ff69b4")
 
 # 初始化
@@ -606,7 +606,8 @@ label scene_5_4:
     scene white
     "突然一阵白光，响起了原神启动的音乐"
     "欢迎报考杭州电子科技大学...........................................（嘻嘻）"
-    
+    # 播放、无限循环
+    play music "audio/music.mp3" loop
     # 游戏结束
     return
 
